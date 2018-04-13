@@ -3,10 +3,22 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import DatePicker from 'material-ui/DatePicker';
 import Paper from 'material-ui/Paper';
+import { IAlcohol } from '../interfaces/Interface';
 
 import '../styles/alcohol.css'
 
-class Alcohol extends React.Component{
+class Alcohol extends React.Component<IAlcohol, {
+        startDate: string;
+        endDate: string;
+}>{
+
+    constructor(props: any){
+        super(props);
+        this.state={
+            startDate: '',
+            endDate: ''
+        }
+    }
 
     render() {
         return(

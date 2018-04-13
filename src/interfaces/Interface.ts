@@ -12,3 +12,8 @@ export interface ITile {
     style?: string;
     path: string;
 }
+
+export interface IAlcohol {
+    startDate?: string;
+    endDate?: string;
+}
