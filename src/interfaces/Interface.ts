@@ -10,4 +10,5 @@ export interface IPanel {
 export interface ITile {
     name?: string;
     style?: string;
+    path: string;
 }

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ISite } from '../interfaces/Interface';
-import AppBar from 'material-ui/AppBar';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 import Tile from './Tile';
@@ -15,21 +14,15 @@ class Home extends React.Component<ISite> {
     render() {
         return(
             <div className="homeContainer">
-                <AppBar 
-                    title="Tracker"
-                    // tslint:disable-next-line jsx-no-lambda
-                    // onLeftIconButtonClick={() => { this.onPress(true);}}
-                />
                 <div className="topRow">
-                    <Tile name={'Lagoon'} />
-                    <Tile name={'Alcohol'} />
+                    <Tile name={'Alcohol'} path={"/alcoholTracker"}/>
+                    <Tile name={'Lagoon'} path={"/lagoonCounter"}/>
                 </div>
                 <div className="bottomRow">
-                    <Tile name={'Counter'} />
+                    <Tile name={'Counter'} path={"/counter"}/>
                 </div>
                 
                 <FloatingActionButton className="add-btn" children={<i className="material-icons">add</i>}/>
-
             </div>
         );
     }

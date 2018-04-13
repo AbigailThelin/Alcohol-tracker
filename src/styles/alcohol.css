@@ -1,0 +1,35 @@
+.alcoholContainer{
+    padding: 1px;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alcoholTitle{
+    font-size: 2rem; 
+}
+
+.paper{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.AlcoholPaper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.leftSide{
+    display: flex;
+    flex-direction: column;
+}
+
+.finishButton{
+    
+}
