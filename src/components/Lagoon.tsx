@@ -9,10 +9,7 @@ import Toggle from 'material-ui/Toggle';
 
 import '../styles/alcohol.css'
 
-class Lagoon extends React.Component<IAlcohol, {
-        startDate: string;
-        endDate: string;
-}>{
+class Lagoon extends React.Component<IAlcohol, any>{
 
     constructor(props: any){
         super(props);

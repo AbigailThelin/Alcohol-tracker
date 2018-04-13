@@ -7,10 +7,7 @@ import { IAlcohol } from '../interfaces/Interface';
 
 import '../styles/alcohol.css'
 
-class Alcohol extends React.Component<IAlcohol, {
-        startDate: string;
-        endDate: string;
-}>{
+class Alcohol extends React.Component<IAlcohol, any>{
 
     constructor(props: any){
         super(props);
