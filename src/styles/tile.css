@@ -1,0 +1,10 @@
+.tileContainer{
+    width: 20%;
+    height: 80%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.titleContainer :hover{
+    color: blue;
+}

@@ -1,0 +1,27 @@
+.homeContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.add-btn{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.topRow{
+    height: 30%;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+    
+.bottomRow{
+    height: 33%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
