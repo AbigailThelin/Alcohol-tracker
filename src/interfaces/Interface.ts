@@ -2,6 +2,10 @@ export interface ISite {
     onPress?: boolean;
 }
 
+export interface StoreState {
+    languageName: string;
+    enthusiasmLevel: number;
+}
 export interface IPanel {
     showPanel?: boolean;
     panel?: boolean;
