@@ -2,9 +2,9 @@ export interface ISite {
     onPress?: boolean;
 }
 
-export interface StoreState {
-    languageName: string;
-    enthusiasmLevel: number;
+export interface IState{
+    startDate?: any,
+    endDate?: any
 }
 export interface IPanel {
     showPanel?: boolean;
@@ -20,4 +20,6 @@ export interface ITile {
 export interface IAlcohol {
     startDate?: string;
     endDate?: string;
+    modal: boolean;
+    exit: any;
 }

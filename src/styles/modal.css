@@ -1,0 +1,29 @@
+.modalContainer{
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    height: 80%;
+    background-color: grey;
+    z-index: 99;
+    width: 40%;
+}
+
+
+.exitContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+.exit {
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    top: 10px;
+}

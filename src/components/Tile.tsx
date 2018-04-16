@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { ITile } from '../interfaces/Interface';
-// import Paper from 'material-ui/Paper';
 import { Link } from 'react-router-dom';
 
+// import { connect } from 'react-redux';
 import '../styles/tile.css';
 
-class Tile extends React.Component<ITile> {
-
-
-
+export default class Tile extends React.Component<ITile> {
     render() {
         return(
             <Link to={this.props.path} className="container">
@@ -20,4 +17,7 @@ class Tile extends React.Component<ITile> {
     }
 }
 
-export default Tile;
+// const mapStateToProps = (state: IState) => ({
+//         date: state.startDate
+// });
+// export default connect(mapStateToProps, )(Tile);
