@@ -27,7 +27,7 @@ class Alcohol extends React.Component<IAlcohol, any>{
     render() {
         return(
             <div className="alcoholContainer">
-                {this.state.modal ? <Modal1 exit={this.toggleModal}/> : null}
+                {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'}/> : null}
                 <p className="alcoholTitle">Alcohol Tracker</p>
                 <Paper zDepth={3} className="paper">
                     <div className="AlcoholPaper">

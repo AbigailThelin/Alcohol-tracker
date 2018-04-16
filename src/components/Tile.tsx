@@ -16,8 +16,3 @@ export default class Tile extends React.Component<ITile> {
         );
     }
 }
-
-// const mapStateToProps = (state: IState) => ({
-//         date: state.startDate
-// });
-// export default connect(mapStateToProps, )(Tile);

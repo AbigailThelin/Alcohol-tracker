@@ -1,19 +1,29 @@
 .modalContainer{
     width: 100vw;
-    height: 50vh;
+    height: 94vh;
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 98;
 }
 
 .modal{
-    height: 80%;
+    margin-top: 50px;
+    height: 60%;
     background-color: grey;
+    position: relative;
     z-index: 99;
     width: 40%;
+    animation: fade-in;
+    animation-duration: .5s;
 }
 
+@keyframes fade-in{
+    from {opacity: .2; top: -20px}
+    to{opacity: 1; top: 0px;}
+}
 
 .exitContainer{
     width: 100%;
@@ -21,6 +31,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
 .exit {
     cursor: pointer;
     position: relative;

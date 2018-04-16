@@ -21,5 +21,4 @@ export interface IAlcohol {
     startDate?: string;
     endDate?: string;
     modal: boolean;
-    exit: any;
 }
