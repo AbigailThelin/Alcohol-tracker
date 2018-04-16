@@ -1,10 +1,32 @@
-.tileContainer{
-    width: 20%;
-    height: 80%;
-    margin: 20px;
-    cursor: pointer;
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
-.titleContainer :hover{
-    color: blue;
+#Tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    cursor: pointer;
+    border-radius: 2px;
+    margin: 1rem;
+    background-color: #FFF;
+}
+
+.card-1 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+  
+.card-1:hover {
+box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.tileTitle{
+    color: grey;
 }
