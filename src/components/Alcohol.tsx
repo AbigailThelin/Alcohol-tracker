@@ -46,11 +46,9 @@ class Alcohol extends React.Component<IAlcohol, any>{
 
 
     render() {
-        console.log('start state', this.state.startDate)
-        console.log('end date', this.state.endDate)
         return(
             <div className="alcoholContainer">
-                {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num}/> : null}
+                {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num} start={this.state.startDate} end={this.state.endDate}/> : null}
                 <p className="alcoholTitle">Alcohol Tracker</p>
                 <Paper zDepth={3} className="paper">
                     <div className="AlcoholPaper">

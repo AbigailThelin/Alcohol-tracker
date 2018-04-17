@@ -25,9 +25,11 @@ class AvailableTrackers extends React.Component{
                         <h3>CURRENT TRACKERS</h3>
                     </div>
                     <div className="trackers">
-                        {/*<Paper className="trackersTile" zDepth={2}>
+                    <Link to='/tracker'>
+                        <Paper className="trackersTile" zDepth={2}>
                             Lagoon
-                        </Paper> */}
+                        </Paper>
+                    </Link>
                     </div>
                 </div>
                 <div className="upcoming">

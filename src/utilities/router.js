@@ -5,6 +5,7 @@ import AvailableTrackers from '../components/AvailableTrackers';
 import CreateTracker from '../components/CreateTracker';
 import Alcohol from '../components/Alcohol';
 import Lagoon from '../components/Lagoon';
+import Tracker from '../components/Tracker';
 
 export default (
     <Switch>
@@ -12,5 +13,6 @@ export default (
         <Route component={CreateTracker} path='/createTracker'/>
         <Route component={Alcohol} path='/alcoholTracker'/>
         <Route component={Lagoon} path='/lagoonCounter'/>
+        <Route component={Tracker} path='/tracker'/>
     </Switch>
 )

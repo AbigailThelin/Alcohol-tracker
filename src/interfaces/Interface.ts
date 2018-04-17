@@ -26,3 +26,7 @@ export interface IAlcohol {
     endDate?: string;
     modal: boolean;
 }
+
+export interface ITracker {
+    employees?: any;
+}
