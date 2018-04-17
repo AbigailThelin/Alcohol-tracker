@@ -26,10 +26,21 @@
 }
 
 .leftSide{
+    width: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: orange; */
 }
 
-.finishButton{
-    
+.rightSide{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: pink; */
 }

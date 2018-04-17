@@ -32,7 +32,7 @@ class Lagoon extends React.Component<IAlcohol, any>{
                 <p className="alcoholTitle">Lagoon Tracker</p>
                 <Paper zDepth={3} className="paper">
                     <div className="AlcoholPaper">
-                        <div className="leftSide">
+                        {/* <div className="leftSide"> */}
                             <TextField
                                 hintText="Name your event here"
                                 floatingLabelText="Name Of Event"
@@ -42,14 +42,14 @@ class Lagoon extends React.Component<IAlcohol, any>{
                                 floatingLabelText="How many tickets allotted"
                             />
                             <Toggle
-                                label="Vegetarian/Vegan"
+                                label="Vegetarian options available"
                             />
                         </div>
                         <div className="rightSide">
                             <DatePicker hintText="Start Date" mode="landscape" />                    
                             <DatePicker hintText="End Date" mode="landscape" />
                         </div>
-                    </div>
+                    {/* </div> */}
                     <div className="button">
                         <RaisedButton className="finishButton" label="Create New Tracker" primary={true} onClick={this.toggleModal}/>
                     </div>
