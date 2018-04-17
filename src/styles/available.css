@@ -1,0 +1,37 @@
+.availableContainer{
+    width: 100vw;
+    height: 100vh;
+}
+
+.head{
+    margin-left: 25px;
+    display: flex;
+}
+
+.current{
+    width: 100%;
+    min-height: 48%;
+    height: auto;
+}
+
+.upcoming{
+    width: 100%;
+    min-height: 48%;
+    height: auto;
+}
+
+.trackers{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.trackersTile{
+    width: 80%;
+    margin: 20px;
+    height: 200px;
+}
+
+.goToCreate{
+}

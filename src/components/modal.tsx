@@ -18,12 +18,11 @@ export const Modal1:React.SFC<IModal> = ({ exit, title, name, number }) =>{
                 <div className="exitContainer">
                     <i className="material-icons exit" onClick={exit}>clear</i>
                 </div>
-                <div>
+                <div className="content">
                     <h3>CONGRATS</h3>
-                    <h6>You created a new {title} tracker event</h6>
-                    <h6>Name: {name}</h6>
-                    <h6>Drinks allotted: {number}</h6>
-                </div>
+                    <h5>You created a new {title} tracker event</h5>
+                    <h5>Name: {name}</h5>
+                    <h5>Drinks allotted: {number}</h5>
                 <Link to='/'>
                     <RaisedButton
                         className="finishButton"
@@ -31,6 +30,7 @@ export const Modal1:React.SFC<IModal> = ({ exit, title, name, number }) =>{
                         primary={true}
                     />
                 </Link>
+                </div>
             </Card>
         </div>
     );

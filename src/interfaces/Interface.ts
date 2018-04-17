@@ -1,3 +1,7 @@
+export interface IAvailable{
+    currentTrackers?: string;
+}
+
 export interface ISite {
     onPress?: boolean;
 }
