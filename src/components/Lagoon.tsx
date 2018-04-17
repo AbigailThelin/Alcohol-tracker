@@ -17,7 +17,17 @@ class Lagoon extends React.Component<IAlcohol, any>{
         this.state={
             startDate: '',
             endDate: '',
+            nameOfEvent: '',
+            num: '',
             modal: false
+        }
+    }
+
+    handleChange = (e: any, type: string) => {
+        if(type = 'name'){
+            this.setState({ nameOfEvent: e.target.value})
+        }else if(type = 'number'){
+            this.setState({ num: e.target.value})
         }
     }
 
@@ -34,10 +44,14 @@ class Lagoon extends React.Component<IAlcohol, any>{
                     <div className="AlcoholPaper">
                         {/* <div className="leftSide"> */}
                             <TextField
+                                // tslint:disable-next-line jsx-no-lambda
+                                onChange={(e) => this.handleChange(e, 'name')}
                                 hintText="Name your event here"
                                 floatingLabelText="Name Of Event"
                             />                   
                             <TextField
+                                // tslint:disable-next-line jsx-no-lambda
+                                onChange={(e) => this.handleChange(e, 'name')}
                                 hintText="Tickets Allotted"
                                 floatingLabelText="How many tickets allotted"
                             />
