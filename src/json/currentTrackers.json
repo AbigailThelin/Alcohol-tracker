@@ -1,0 +1,34 @@
+{
+    "CurrentTrackers": [
+        {
+            "Name": "Jersey Day",
+            "Number": "2",
+            "startDate": "1.23.18",
+            "endDate": "1.24.18"
+        },
+        {
+            "Name": "Football Day",
+            "Number": "2",
+            "startDate": "1.23.18",
+            "endDate": "1.24.18"
+        },
+        {
+            "Name": "Soccer Day",
+            "Number": "2",
+            "startDate": "1.23.18",
+            "endDate": "1.24.18"
+        },
+        {
+            "Name": "Sports Day",
+            "Number": "2",
+            "startDate": "1.23.18",
+            "endDate": "1.24.18"
+        },
+        {
+            "Name": "IceCream Day",
+            "Number": "2",
+            "startDate": "1.23.18",
+            "endDate": "1.24.18"
+        }
+    ]
+}

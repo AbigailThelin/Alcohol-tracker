@@ -9,6 +9,8 @@ export interface IModal {
     title?: string;
     name?: string | number;
     number?: any;
+    // start?: string;
+    // end?: string;
 } 
 
 export const Modal1:React.SFC<IModal> = ({ exit, title, name, number }) =>{

@@ -3,6 +3,8 @@ import { IAvailable } from '../interfaces/Interface';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import { Link } from 'react-router-dom';
 import Paper from 'material-ui/Paper';
+import currentTrackers from '../json/currentTrackers.json';
+import axios from 'axios';
 
 
 import '../styles/available.css'
@@ -11,11 +13,9 @@ class AvailableTrackers extends React.Component{
 
     constructor(props){
         super(props);
-        this.state={
-            currentTrackers:[],
-            upcomingTrackers:[]
-        }
+        this.state={}
     }
+
 
     render(){
         return(
@@ -25,13 +25,9 @@ class AvailableTrackers extends React.Component{
                         <h3>CURRENT TRACKERS</h3>
                     </div>
                     <div className="trackers">
-                        {/* {this.state.currentTrackers ? 'No current trackers' : null} */}
-                        <div className="card-1 trackersTile">
-                            Alcohol
-                        </div>
-                        <Paper className="trackersTile" zDepth={2}>
+                        {/*<Paper className="trackersTile" zDepth={2}>
                             Lagoon
-                        </Paper>
+                        </Paper> */}
                     </div>
                 </div>
                 <div className="upcoming">

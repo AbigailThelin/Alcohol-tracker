@@ -31,13 +31,23 @@ class Alcohol extends React.Component<IAlcohol, any>{
         }
     }
 
+    startDateChange = (e:any, value:any) => {
+        this.setState({startDate: value})
+    }
+
+    endDateChange = (e:any, value:any) => {
+        this.setState({endDate: value})
+    }
+    
+
     toggleModal = () => {
         this.setState({modal: !this.state.modal})
     }
 
 
     render() {
-        console.log('redux state', this.props.endDate)
+        console.log('start state', this.state.startDate)
+        console.log('end date', this.state.endDate)
         return(
             <div className="alcoholContainer">
                 {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num}/> : null}
@@ -60,10 +70,12 @@ class Alcohol extends React.Component<IAlcohol, any>{
                         </div>
                         <div className="rightSide">
                             <DatePicker
+                                onChange={this.startDateChange}
                                 hintText="Start Date" 
                                 mode="landscape" 
                             />                    
                             <DatePicker
+                                onChange={this.endDateChange}
                                 hintText="End Date" 
                                 mode="landscape" 
                             />
