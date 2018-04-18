@@ -29,4 +29,6 @@ export interface IAlcohol {
 
 export interface ITracker {
     employees?: any;
+    badgeID?: string;
+    ids?: any;
 }
