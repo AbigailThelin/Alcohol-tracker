@@ -18,3 +18,14 @@
     flex-direction: column;
     overflow: hidden;
 }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitBtn{
+    width: 60%;
+    margin-top: 30px;
+}
