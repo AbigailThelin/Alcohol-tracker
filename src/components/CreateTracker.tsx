@@ -13,6 +13,7 @@ class CreateTracker extends React.Component<ISite> {
     render() {
         return(
             <div className="homeContainer">
+                <h3>Click a tile to create a new Tracker</h3>
                 <div className="topRow">
                     <Tile name={'Alcohol'} path={"/alcoholTracker"}/>
                     <Tile name={'Lagoon'} path={"/lagoonCounter"}/>

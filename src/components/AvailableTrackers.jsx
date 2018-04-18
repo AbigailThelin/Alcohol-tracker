@@ -13,11 +13,14 @@ class AvailableTrackers extends React.Component{
 
     constructor(props){
         super(props);
-        this.state={}
+        this.state={
+            availableTiles: [{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'},{name: 'TEST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla'}]
+        }
     }
 
 
     render(){
+        const availableTrackers = this.state.availableTiles;
         return(
             <div className="availableContainer">
                 <div className="current">
@@ -25,16 +28,31 @@ class AvailableTrackers extends React.Component{
                         <h3>CURRENT TRACKERS</h3>
                     </div>
                     <div className="trackers">
-                    <Link to='/tracker'>
-                        <Paper className="trackersTile" zDepth={2}>
-                            Lagoon
-                        </Paper>
-                    </Link>
+                    {availableTrackers.map(function(availableTracker){
+                        console.log('here dawg',availableTracker.name)
+                        return(
+                            <Link to='/tracker'>
+                                <Paper className="trackersTile" zDepth={2}>
+                                    <h3>{availableTracker.name}</h3>
+                                    <p>{availableTracker.description}</p>
+                                </Paper>
+                            </Link>
+                        )
+                    })}
                     </div>
                 </div>
                 <div className="upcoming">
                     <div className="head">
                         <h3>UPCOMING TRACKERS</h3>
+                    </div>
+                    <div className="trackers">
+                        {this.state.upcomingTrackers ? 'No upcoming trackers' : null}
+                    </div>
+                </div>
+
+                <div className="upcoming">
+                    <div className="head">
+                        <h3>PAST EVENTS</h3>
                     </div>
                     <div className="trackers">
                         {this.state.upcomingTrackers ? 'No upcoming trackers' : null}

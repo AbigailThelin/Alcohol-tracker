@@ -1,3 +1,7 @@
+export interface IApp {
+    openPanel: boolean;
+}
+
 export interface IAvailable{
     currentTrackers?: string;
 }
@@ -11,8 +15,7 @@ export interface IState{
     endDate?: any
 }
 export interface IPanel {
-    showPanel?: boolean;
-    panel?: boolean;
+    open?: any;
 }
 
 export interface ITile {

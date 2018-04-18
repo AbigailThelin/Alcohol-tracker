@@ -1,38 +1,20 @@
 import * as React from 'react';
 import { IPanel } from '../interfaces/Interface';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
-import { Panel, PanelType } from 'office-ui-fabric-react/lib/Panel';
+// import Drawer from 'material-ui/Drawer';
 
-class PanelComp extends React.Component<IPanel, {
-    showPanel: boolean;
-  }> {
+export default class Panel extends React.Component<IPanel, any>{
 
-  constructor (props: IPanel) {
-    super (props);
-    this.state = { 
-        showPanel: false 
-    };
+  constructor(props:any){
+    super(props);
+    this.state={}
   }
 
-  render() {
-    return (
-      <div>
+  render(){
+    return(
+      <p>hello</p>
+      // <Drawer open>
 
-        <Panel
-          isOpen={this.state.showPanel}
-          isHiddenOnDismiss={true}
-          type={PanelType.smallFixedNear}
-          // tslint:disable-next-line jsx-no-lambda
-          onDismiss={() => this.setState({ showPanel: false })}
-          headerText="INFO"
-        >
-        {/* tslint:disable-next-line jsx-no-lambda */}
-        <DefaultButton text="SAVE" onClick={() => this.setState({ showPanel: false})}/>
-
-        </Panel>
-      </div>
-    );
+      // </Drawer>
+    )
   }
 }
-
-export default PanelComp;
