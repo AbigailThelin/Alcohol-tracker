@@ -3,7 +3,8 @@ export interface IApp {
 }
 
 export interface IAvailable{
-    currentTrackers?: string;
+    currentTrackers?: any;
+    filteredTrackers?: any
 }
 
 export interface ISite {
@@ -34,4 +35,4 @@ export interface ITracker {
     employees?: any;
     badgeID?: string;
     ids?: any;
-}
+} 

@@ -1,7 +1,20 @@
 .availableContainer{
     width: 100vw;
     height: 100vh;
+}
+
+.link{
     text-decoration: none;
+}
+
+.btnContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.goToCreate{
+    margin: 30px;
 }
 
 .head{
@@ -13,6 +26,8 @@
     width: 100%;
     min-height: 48%;
     height: auto;
+    position: relative;
+    margin-top: -50px;
 }
 
 .upcoming{
