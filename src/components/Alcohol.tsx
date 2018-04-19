@@ -6,7 +6,6 @@ import Paper from 'material-ui/Paper';
 import { IAlcohol } from '../interfaces/Interface';
 import { Modal1 } from './modal';
 import { connect } from 'react-redux';
-import { startDate, endDate } from '../actions/index';
 
 import '../styles/alcohol.css'
 
@@ -46,6 +45,7 @@ class Alcohol extends React.Component<IAlcohol, any>{
 
 
     render() {
+        console.log('redux', this.props.startDate)
         return(
             <div className="alcoholContainer">
                 {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num} start={this.state.startDate} end={this.state.endDate}/> : null}
@@ -88,11 +88,12 @@ class Alcohol extends React.Component<IAlcohol, any>{
     }
 }
 
-function mapStateToProps({startDate, endDate}: IAlcohol){
+function mapStateToProps(state: IAlcohol){
+    console.log('stateeee', state)
     return{
-        startDate,
-        endDate
+        startDate: state.startDate,
+        endDate: state.endDate
     }
 }
 
-export default connect(mapStateToProps, { startDate, endDate})(Alcohol);
+export default connect(mapStateToProps)(Alcohol);
