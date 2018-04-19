@@ -26,8 +26,8 @@ export interface ITile {
 }
 
 export interface IAlcohol {
-    startDate?: string;
-    endDate?: string;
+    startDate?: any;
+    endDate?: any;
     modal: boolean;
 }
 

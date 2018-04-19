@@ -1,3 +1,9 @@
-export default function() {
-    return [{ startDate: '1/29/2018' }]
+export default function( state= null, action: any) {
+    console.log('startDate payload', action.payload)
+    switch(action.type) {
+        case 'START_DATE' :
+            return action.payload
+    }
+
+    return state
 }
