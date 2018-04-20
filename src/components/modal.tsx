@@ -15,6 +15,7 @@ export interface IModal {
 } 
 
 export const Modal1:React.SFC<IModal> = ({ exit, title, name, number, start, end }) =>{
+    console.log('modal props', start)
     return (
         <div className="modalContainer" onClick={exit}>
             <Card className="modal">

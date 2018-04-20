@@ -1,7 +1,7 @@
 export default function(state = null, action: any){
-    console.log('action.payload end',action.payload)
     switch(action.type) {
         case 'END_DATE':
+        console.log('maybe, dss', action.payload)
             return action.payload
     }
 

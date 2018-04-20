@@ -15,8 +15,6 @@ class Alcohol extends React.Component<IAlcohol, any>{
     constructor(props: any){
         super(props);
         this.state={
-            // startDate: null,
-            // endDate: null,
             nameOfEvent: '',
             num: '',
             modal: false
@@ -34,6 +32,7 @@ class Alcohol extends React.Component<IAlcohol, any>{
     startDateChange = (e:any, value:any) => {
         // this.setState({startDate: value})
         this.props.startDate(value)
+        console.log('redux', this.props.startDateBlah)
     }
 
     endDateChange = (e:any, value:any) => {
@@ -48,10 +47,9 @@ class Alcohol extends React.Component<IAlcohol, any>{
 
 
     render() {
-        // console.log('redux', this.props.endDate)
         return(
             <div className="alcoholContainer">
-                {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num} start={this.state.startDate} end={this.state.endDate}/> : null}
+                {this.state.modal ? <Modal1 exit={this.toggleModal} title={'Alcohol'} name={this.state.nameOfEvent} number={this.state.num} start={this.props.startDate} end={this.props.endDate}/> : null}
                 <p className="alcoholTitle">Alcohol Tracker</p>
                 <Paper zDepth={3} className="paper">
                     <div className="AlcoholPaper">
@@ -93,7 +91,7 @@ class Alcohol extends React.Component<IAlcohol, any>{
 
 function mapStateToProps(state: IAlcohol){
     return{
-        alcoholTitle: 'jersey day'
+        startDateBlah: startDate
     }
 }
 

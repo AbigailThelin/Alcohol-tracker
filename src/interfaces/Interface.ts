@@ -29,6 +29,7 @@ export interface IAlcohol {
     startDate?: any;
     endDate?: any;
     modal: boolean;
+    startDateBlah?: any;
 }
 
 export interface ITracker {
