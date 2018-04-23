@@ -17,6 +17,7 @@ export interface IState{
 }
 export interface IPanel {
     open?: any;
+    toggle?:any;
 }
 
 export interface ITile {

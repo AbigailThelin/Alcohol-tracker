@@ -34,11 +34,6 @@ class Alcohol extends React.Component<IAlcohol, any>{
         this.props.startDate(value)
         console.log('redux', this.props.startDateBlah)
     }
-
-    endDateChange = (e:any, value:any) => {
-        // this.setState({endDate: value})
-        this.props.endDate(value)
-    }
     
 
     toggleModal = () => {
@@ -70,12 +65,7 @@ class Alcohol extends React.Component<IAlcohol, any>{
                         <div className="rightSide">
                             <DatePicker
                                 onChange={this.startDateChange}
-                                hintText="Start Date" 
-                                mode="landscape" 
-                            />                    
-                            <DatePicker
-                                onChange={this.endDateChange}
-                                hintText="End Date" 
+                                hintText="Date of Event" 
                                 mode="landscape" 
                             />
                         </div>

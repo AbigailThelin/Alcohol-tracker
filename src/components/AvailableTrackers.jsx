@@ -7,18 +7,18 @@ import currentTrackers from '../json/currentTrackers.json';
 import axios from 'axios';
 
 import '../styles/available.css'
+import { RaisedButton } from 'material-ui';
 
 class AvailableTrackers extends React.Component{
 
     constructor(props){
         super(props);
         this.state={
-            availableTiles: [{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-11'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-10'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-27'},{name: '18', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-18'},{name: '14', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-19'}],
+            availableTiles: [{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-17'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-20'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-23'},{name: '19', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-24'},{name: '18', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-18'},{name: '14', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla', date:'2018-04-19'}],
             availableTracker: [],
             upcomingTrackers: [],
             pastTrackers: []
         }
-        // this.filter = this.filter.bind(this)
     }
 
     componentWillMount(){
@@ -46,12 +46,17 @@ class AvailableTrackers extends React.Component{
             availableTracker, pastTrackers, upcomingTrackers
         })
     }
+
     
     
     render(){
         const availableTrackers = this.state.availableTracker;
         const upcomingTrackers = this.state.upcomingTrackers;
         const pastTrackers = this.state.pastTrackers;
+        let size = 5;
+        let addFive = function(size){
+            return size += 5
+        }
         // const { pastTrackers, upcomingTrackers, availableTrackers } = this.state;
         return(
             <div className="availableContainer">
@@ -102,18 +107,31 @@ class AvailableTrackers extends React.Component{
                         <h3>PAST EVENTS</h3>
                     </div>
                     <div className="trackers">
-                    {pastTrackers.map((pastTracker,index)=>{
+                    {pastTrackers.slice(0, size).map((pastTracker,index)=>{
                         return(
                             <Link to='/tracker'>
                                 <Paper className="trackersTile" key={`pastTracker${index}`} zDepth={2}>
                                     <h3>{pastTracker.name}</h3>
                                     <p>{pastTracker.description}</p>
                                     <p>{pastTracker.date}</p>
+                                    <p>Click to view event details</p>
                                 </Paper>
                             </Link>
                         )
                     })}
                     </div>
+                    {pastTrackers.length > 5 ? 
+                    <div className="showMoreContainer">
+                        <RaisedButton
+                            onClick={this.addFive}
+                            className="showMoreBtn"
+                            label="Show More"
+                            primary={true}
+                        />
+                    </div>
+                    :
+                    null
+                    }
                 </div>
             </div>
         )
